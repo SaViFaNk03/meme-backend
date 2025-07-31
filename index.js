@@ -16,9 +16,11 @@ import { loginRouter } from './routes/login.js';
 import { memeRouter } from './routes/meme.js';
 import { commentRouter } from './routes/comment.js';
 
+
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+
+const PORT = 3000;
 
 const swaggerSpec = swaggerJSDoc({
     definition: {
@@ -30,28 +32,35 @@ const swaggerSpec = swaggerJSDoc({
         },
 
     },
-    apis: ['./routes/*.js'],
+    apis: ['./routes/*.js'], // Path to the API docs
 });
 
+
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.use(cors({
-  origin: 'http://mememuseum.altervista.org' // o https se usi https
-}));
+app.use(cors({origin : 'http://mememuseum.altervista.org'}));
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Servizio file statici per le immagini caricate
 app.use('/uploads', express.static('uploads'));
 
+// Servi il file di test HTML per upload
 app.get('/test-upload', (req, res) => {
     res.sendFile(path.join(__dirname, 'test-upload.html'));
 });
 
+
+
+// Routes
 app.use(signupRouter);
 app.use(loginRouter);
 app.use('/api', memeRouter);
 app.use('/api', commentRouter);
 
+// Route di benvenuto
 app.get('/', (req, res) => {
     res.json({
         message: 'Welcome to the Meme Museum API!',
@@ -60,5 +69,8 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`API documentation available at http://localhost:${PORT}/api-docs`);
 });
+
+
