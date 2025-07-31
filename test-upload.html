@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Museum - Test Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .nav-button {
+            background: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .nav-button:hover {
+            background: #5a6268;
+        }
+        .nav-button.active {
+            background: #007bff;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .preview {
+            margin-top: 10px;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .meme-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .meme-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .meme-card-content {
+            padding: 15px;
+        }
+        .meme-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .meme-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .meme-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .meme-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .tag {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            color: #495057;
+        }
+        .auth-status {
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .auth-status.logged-in {
+            background: #d4edda;
+            color: #155724;
+        }
+        .auth-status.logged-out {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .meme-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .vote-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .vote-btn {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+            color: #495057;
+            min-width: 60px;
+            justify-content: center;
+        }
+        .vote-btn:hover {
+            background: #e9ecef;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .vote-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background: #f8f9fa;
+        }
+        .vote-btn.upvote {
+            border-color: #28a745;
+            color: #28a745;
+        }
+        .vote-btn.upvote:hover {
+            background: #d4edda;
+            border-color: #1e7e34;
+        }
+        .vote-btn.downvote {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
+        .vote-btn.downvote:hover {
+            background: #f8d7da;
+            border-color: #bd2130;
+        }
+        .vote-btn.voted {
+            color: white;
+            font-weight: bold;
+        }
+        .vote-btn.upvote.voted {
+            background: #28a745;
+            border-color: #1e7e34;
+        }
+        .vote-btn.downvote.voted {
+            background: #dc3545;
+            border-color: #bd2130;
+        }
+        .view-details-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .view-details-btn:hover {
+            background: #218838;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+        .meme-detail-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .comments-section {
+            margin-top: 30px;
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+        }
+        .comment-form {
+            margin-bottom: 20px;
+        }
+        .comment-form textarea {
+            height: 60px;
+            resize: none;
+        }
+        .comment {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #007bff;
+        }
+        .comment-author {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .comment-meta {
+            font-size: 11px;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .comment-vote-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .small-vote-btn {
+            background: #e9ecef;
+            border: 2px solid #dee2e6;
+            padding: 4px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            transition: all 0.2s;
+            min-width: 35px;
+            text-align: center;
+        }
+        .small-vote-btn:hover {
+            background: #dee2e6;
+            transform: translateY(-1px);
+        }
+        .small-vote-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .small-vote-btn.upvote {
+            color: #28a745;
+            border-color: #28a745;
+        }
+        .small-vote-btn.upvote:hover {
+            background: #d4edda;
+        }
+        .small-vote-btn.downvote {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+        .small-vote-btn.downvote:hover {
+            background: #f8d7da;
+        }
+        .small-vote-btn.voted {
+            color: white;
+            font-weight: bold;
+        }
+        .small-vote-btn.upvote.voted {
+            background: #28a745;
+            border-color: #1e7e34;
+        }
+        .small-vote-btn.downvote.voted {
+            background: #dc3545;
+            border-color: #bd2130;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 Meme Museum</h1>
+        
+        <div id="authStatus" class="auth-status logged-out">
+            Non autenticato - Puoi visualizzare i meme ma non caricarli
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="nav-button active" onclick="showSection('browse', this)">🔍 Sfoglia Meme</button>
+            <button class="nav-button" onclick="showSection('signup', this)">📝 Registrati</button>
+            <button class="nav-button" onclick="showSection('login', this)">🔑 Accedi</button>
+            <button class="nav-button" id="uploadBtn" onclick="showSection('upload', this)" style="display: none;">📤 Carica Meme</button>
+            <button class="nav-button" id="logoutBtn" onclick="logout()" style="display: none;">🚪 Logout</button>
+        </div>
+
+        <!-- Sezione Browse Meme -->
+        <div id="browseSection" class="section active">
+            <h3>🎭 Tutti i Meme</h3>
+            <div class="form-group">
+                <label for="searchTag">Filtra per tag:</label>
+                <input type="text" id="searchTag" placeholder="Es: funny, cat, meme" onchange="loadMemes()">
+            </div>
+            <button onclick="loadMemes()">🔄 Ricarica Meme</button>
+            <div id="memesContainer" class="loading">Caricamento meme...</div>
+        </div>
+
+        <!-- Sezione Signup -->
+        <div id="signupSection" class="section">
+            <h3>📝 Registrazione</h3>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username *:</label>
+                    <input type="text" id="signupUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password *:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupName">Nome *:</label>
+                    <input type="text" id="signupName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupSurname">Cognome *:</label>
+                    <input type="text" id="signupSurname" name="surname" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email *:</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                <button type="submit">Registrati</button>
+            </form>
+        </div>
+
+        <!-- Sezione Login -->
+        <div id="loginSection" class="section">
+            <h3>🔑 Accesso</h3>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="testuser" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" value="testpass" required>
+                </div>
+                <button type="submit">Accedi</button>
+            </form>
+        </div>
+
+        <!-- Sezione Upload -->
+        <div id="uploadSection" class="section">
+            <h3>📤 Carica Meme</h3>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="title">Titolo *:</label>
+                    <input type="text" id="title" name="title" placeholder="Es: Meme divertente" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descrizione:</label>
+                    <textarea id="description" name="description" placeholder="Descrizione opzionale del meme"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Immagine *:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <img id="preview" class="preview" style="display: none;">
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tag (separati da virgole):</label>
+                    <input type="text" id="tags" name="tags" placeholder="Es: funny, meme, cat">
+                </div>
+                <button type="submit">Carica Meme</button>
+            </form>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Modal per visualizzazione dettagliata meme -->
+    <div id="memeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMemeModal()">&times;</span>
+            <div id="memeDetail"></div>
+        </div>
+    </div>
+
+    <script>
+        let authToken = '';
+        let currentUser = null;
+
+        // Inizializzazione
+        document.addEventListener('DOMContentLoaded', () => {
+            // Controlla se c'è un token salvato nel localStorage
+            const savedToken = localStorage.getItem('authToken');
+            const savedUser = localStorage.getItem('currentUser');
+            
+            if (savedToken && savedUser) {
+                authToken = savedToken;
+                currentUser = JSON.parse(savedUser);
+                updateAuthStatus(true);
+            }
+            
+            loadMemes();
+        });
+
+        // Gestione navigazione
+        function showSection(sectionName, clickedButton = null) {
+            // Nascondi tutte le sezioni
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Rimuovi classe active da tutti i pulsanti
+            document.querySelectorAll('.nav-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Mostra la sezione selezionata
+            document.getElementById(sectionName + 'Section').classList.add('active');
+            
+            // Attiva il pulsante corrispondente se fornito
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            } else {
+                // Trova e attiva il pulsante corrispondente
+                const buttons = document.querySelectorAll('.nav-button');
+                buttons.forEach(btn => {
+                    if (btn.onclick && btn.onclick.toString().includes(`'${sectionName}'`)) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Signup form
+        document.getElementById('signupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showResult('Registrazione completata con successo! Ora puoi effettuare il login.', 'success');
+                    e.target.reset();
+                    showSection('login');
+                } else {
+                    showResult('Errore registrazione: ' + (result.error || result), 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        });
+
+        // Login form
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    authToken = result.token;
+                    currentUser = result.user || { username: data.username };
+                    
+                    // Salva nel localStorage
+                    localStorage.setItem('authToken', authToken);
+                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                    
+                    updateAuthStatus(true);
+                    showResult('Login effettuato con successo!', 'success');
+                    showSection('browse');
+                } else {
+                    showResult('Errore login: ' + result.error, 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        });
+
+        // Logout
+        function logout() {
+            authToken = '';
+            currentUser = null;
+            
+            // Rimuovi dal localStorage
+            localStorage.removeItem('authToken');
+            localStorage.removeItem('currentUser');
+            
+            updateAuthStatus(false);
+            showResult('Logout effettuato', 'success');
+            showSection('browse');
+        }
+
+        // Aggiorna stato autenticazione
+        function updateAuthStatus(isLoggedIn) {
+            const authStatus = document.getElementById('authStatus');
+            const uploadBtn = document.getElementById('uploadBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            if (isLoggedIn) {
+                authStatus.textContent = `Benvenuto ${currentUser.username}! Ora puoi caricare meme.`;
+                authStatus.className = 'auth-status logged-in';
+                uploadBtn.style.display = 'inline-block';
+                logoutBtn.style.display = 'inline-block';
+            } else {
+                authStatus.textContent = 'Non autenticato - Puoi visualizzare i meme ma non caricarli';
+                authStatus.className = 'auth-status logged-out';
+                uploadBtn.style.display = 'none';
+                logoutBtn.style.display = 'none';
+            }
+        }
+
+        // Carica meme
+        async function loadMemes() {
+            const container = document.getElementById('memesContainer');
+            container.innerHTML = '<div class="loading">Caricamento meme...</div>';
+            
+            try {
+                const tagFilter = document.getElementById('searchTag').value.trim();
+                let url = '/memes';
+                if (tagFilter) {
+                    url += `?tags=${encodeURIComponent(tagFilter)}`; // Cambiato da 'tag' a 'tags'
+                }
+                
+                console.log('🔍 Loading memes from:', url);
+                const response = await fetch(url);
+                const result = await response.json();
+                console.log('📦 Memes loaded:', result);
+                
+                if (response.ok) {
+                    displayMemes(result.memes || result);
+                } else {
+                    container.innerHTML = '<div class="error">Errore nel caricamento dei meme: ' + (result.error || 'Errore sconosciuto') + '</div>';
+                }
+            } catch (error) {
+                container.innerHTML = '<div class="error">Errore di rete: ' + error.message + '</div>';
+            }
+        }
+
+        // Mostra meme
+        function displayMemes(memes) {
+            const container = document.getElementById('memesContainer');
+            
+            if (!memes || memes.length === 0) {
+                container.innerHTML = '<div class="loading">Nessun meme trovato.</div>';
+                return;
+            }
+            
+            console.log('📊 Displaying memes:', memes.map(m => ({ 
+                id: m.id, 
+                title: m.title, 
+                upvotes: m.upvotes, 
+                downvotes: m.downvotes,
+                createdAt: m.createdAt
+            })));
+            
+            container.innerHTML = '<div class="meme-grid"></div>';
+            const grid = container.querySelector('.meme-grid');
+            
+            memes.forEach(meme => {
+                const memeCard = document.createElement('div');
+                memeCard.className = 'meme-card';
+                
+                const tagsHtml = meme.tags && meme.tags.length > 0 
+                    ? '<div class="meme-tags">' + meme.tags.map(tag => `<span class="tag">${tag.name || tag}</span>`).join('') + '</div>'
+                    : '';
+                
+                memeCard.innerHTML = `
+                    <img src="${meme.imageUrl}" alt="${meme.title}" loading="lazy">
+                    <div class="meme-card-content">
+                        <div class="meme-title">${meme.title}</div>
+                        ${meme.description ? `<div class="meme-description">${meme.description}</div>` : ''}
+                        <div class="meme-meta">
+                            <span>👤 ${meme.author?.username || meme.User?.username || 'Anonimo'}</span>
+                            <span>📅 ${new Date(meme.createdAt).toLocaleDateString()}</span>
+                        </div>
+                        ${tagsHtml}
+                        <div class="meme-actions">
+                            <div class="vote-buttons">
+                                <button class="vote-btn upvote" onclick="voteMeme(${meme.id}, true)" ${!authToken ? 'disabled' : ''}>
+                                    👍 ${meme.upvotes || 0}
+                                </button>
+                                <button class="vote-btn downvote" onclick="voteMeme(${meme.id}, false)" ${!authToken ? 'disabled' : ''}>
+                                    👎 ${meme.downvotes || 0}
+                                </button>
+                            </div>
+                            <button class="view-details-btn" onclick="viewMemeDetails(${meme.id})">
+                                💬 Dettagli
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(memeCard);
+            });
+        }
+
+        // File preview
+        document.getElementById('image').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const preview = document.getElementById('preview');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Upload form
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (!authToken) {
+                showResult('Errore: Devi effettuare il login per caricare meme', 'error');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('title', document.getElementById('title').value);
+            formData.append('description', document.getElementById('description').value);
+            formData.append('image', document.getElementById('image').files[0]);
+            
+            const tagsValue = document.getElementById('tags').value;
+            if (tagsValue.trim()) {
+                const tagsArray = tagsValue.split(',').map(tag => tag.trim()).filter(tag => tag);
+                formData.append('tags', JSON.stringify(tagsArray));
+            }
+
+            try {
+                const response = await fetch('/memes/upload', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': authToken
+                    },
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showResult(`
+                        <strong>Meme caricato con successo!</strong><br>
+                        ID: ${result.meme.id}<br>
+                        Titolo: ${result.meme.title}<br>
+                        URL Immagine: <a href="${result.meme.imageUrl}" target="_blank">${result.meme.imageUrl}</a>
+                    `, 'success');
+                    
+                    // Reset form
+                    e.target.reset();
+                    document.getElementById('preview').style.display = 'none';
+                    
+                    // Ricarica i meme per mostrare quello nuovo
+                    loadMemes();
+                } else {
+                    showResult('Errore upload: ' + result.error, 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        });
+
+        function showResult(message, type) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = message;
+            resultDiv.className = `result ${type}`;
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Funzioni per i voti dei meme
+        async function voteMeme(memeId, isUpvote) {
+            if (!authToken) {
+                showResult('Devi effettuare il login per votare', 'error');
+                return;
+            }
+
+            try {
+                console.log('🗳️ Voting meme:', { memeId, isUpvote });
+                const response = await fetch(`/memes/${memeId}/vote`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': authToken
+                    },
+                    body: JSON.stringify({ isUpvote })
+                });
+
+                const result = await response.json();
+                console.log('📊 Vote response:', result);
+
+                if (response.ok) {
+                    showResult(result.message, 'success');
+                    // Aspetta un momento per permettere agli hook di completare
+                    setTimeout(() => {
+                        console.log('🔄 Reloading memes after vote...');
+                        loadMemes(); // Ricarica per aggiornare i conteggi
+                        
+                        // Se il modal è aperto, aggiorna anche i dettagli del meme
+                        const modal = document.getElementById('memeModal');
+                        if (modal.style.display === 'block') {
+                            console.log('🔄 Refreshing modal details for meme:', memeId);
+                            setTimeout(() => {
+                                viewMemeDetails(memeId, false); // false = non riaprire, solo aggiorna
+                            }, 200);
+                        }
+                    }, 1000); // Aumentato il timeout a 1 secondo
+                } else {
+                    showResult('Errore nel voto: ' + result.error, 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        }
+
+        // Visualizza dettagli meme con commenti
+        async function viewMemeDetails(memeId, openModal = true) {
+            try {
+                console.log('🔍 Loading meme details for ID:', memeId);
+                const response = await fetch(`/meme/${memeId}`);
+                const meme = await response.json();
+
+                if (response.ok) {
+                    console.log('📋 Meme details loaded:', { 
+                        id: meme.id, 
+                        title: meme.title, 
+                        upvotes: meme.upvotes, 
+                        downvotes: meme.downvotes 
+                    });
+                    displayMemeDetails(meme);
+                    if (openModal) {
+                        document.getElementById('memeModal').style.display = 'block';
+                    }
+                } else {
+                    showResult('Errore nel caricamento del meme: ' + meme.error, 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        }
+
+        // Mostra dettagli meme nel modal
+        function displayMemeDetails(meme) {
+            const detailContainer = document.getElementById('memeDetail');
+            
+            // Gestisci la struttura dei voti - possono essere in meme.votes o direttamente in meme
+            const upvotes = meme.votes?.upvotes || meme.upvotes || 0;
+            const downvotes = meme.votes?.downvotes || meme.downvotes || 0;
+            
+            console.log('🔍 Displaying meme details:', { 
+                id: meme.id, 
+                title: meme.title, 
+                upvotes, 
+                downvotes,
+                rawVotes: meme.votes,
+                rawUpvotes: meme.upvotes,
+                rawDownvotes: meme.downvotes
+            });
+            
+            const tagsHtml = meme.tags && meme.tags.length > 0 
+                ? '<div class="meme-tags">' + meme.tags.map(tag => `<span class="tag">${tag.name || tag}</span>`).join('') + '</div>'
+                : '';
+
+            const commentFormHtml = authToken ? `
+                <div class="comment-form">
+                    <h4>💬 Aggiungi un commento</h4>
+                    <textarea id="commentContent" placeholder="Scrivi il tuo commento..."></textarea>
+                    <button onclick="addComment(${meme.id})" style="width: auto; margin-top: 10px;">Invia Commento</button>
+                </div>
+            ` : '<p><em>Effettua il login per commentare</em></p>';
+
+            detailContainer.innerHTML = `
+                <h2>${meme.title}</h2>
+                <img src="${meme.imageUrl}" alt="${meme.title}" class="meme-detail-image">
+                ${meme.description ? `<p><strong>Descrizione:</strong> ${meme.description}</p>` : ''}
+                <div class="meme-meta">
+                    <span>👤 <strong>Autore:</strong> ${meme.author?.username || meme.User?.username || 'Anonimo'}</span><br>
+                    <span>📅 <strong>Data:</strong> ${new Date(meme.createdAt).toLocaleDateString()}</span><br>
+                    <span>👍 <strong>Upvotes:</strong> ${upvotes} | 👎 <strong>Downvotes:</strong> ${downvotes}</span>
+                </div>
+                ${tagsHtml}
+                <div class="meme-actions" style="justify-content: center; margin: 20px 0;">
+                    <div class="vote-buttons">
+                        <button class="vote-btn upvote" onclick="voteMeme(${meme.id}, true)" ${!authToken ? 'disabled' : ''}>
+                            👍 ${upvotes}
+                        </button>
+                        <button class="vote-btn downvote" onclick="voteMeme(${meme.id}, false)" ${!authToken ? 'disabled' : ''}>
+                            👎 ${downvotes}
+                        </button>
+                    </div>
+                </div>
+                <div class="comments-section">
+                    <h3>💬 Commenti</h3>
+                    ${commentFormHtml}
+                    <div id="commentsContainer">
+                        <div class="loading">Caricamento commenti...</div>
+                    </div>
+                </div>
+            `;
+
+            loadComments(meme.id);
+        }
+
+        // Carica commenti per un meme
+        async function loadComments(memeId) {
+            try {
+                const response = await fetch(`/memes/${memeId}/comments`);
+                const result = await response.json();
+
+                if (response.ok) {
+                    displayComments(result.comments || result);
+                } else {
+                    document.getElementById('commentsContainer').innerHTML = 
+                        '<div class="error">Errore nel caricamento dei commenti</div>';
+                }
+            } catch (error) {
+                document.getElementById('commentsContainer').innerHTML = 
+                    '<div class="error">Errore di rete nel caricamento dei commenti</div>';
+            }
+        }
+
+        // Mostra commenti
+        function displayComments(comments) {
+            const container = document.getElementById('commentsContainer');
+            
+            if (!comments || comments.length === 0) {
+                container.innerHTML = '<div class="loading">Nessun commento ancora.</div>';
+                return;
+            }
+
+            container.innerHTML = comments.map(comment => `
+                <div class="comment">
+                    <div class="comment-author">👤 ${comment.User?.username || 'Anonimo'}</div>
+                    <div class="comment-content">${comment.content}</div>
+                    <div class="comment-meta">
+                        <span>📅 ${new Date(comment.createdAt).toLocaleDateString()}</span>
+                        <div class="comment-vote-buttons">
+                            <button class="small-vote-btn upvote" onclick="voteComment(${comment.id}, true)" ${!authToken ? 'disabled' : ''}>
+                                👍 ${comment.upvotes || 0}
+                            </button>
+                            <button class="small-vote-btn downvote" onclick="voteComment(${comment.id}, false)" ${!authToken ? 'disabled' : ''}>
+                                👎 ${comment.downvotes || 0}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Aggiungi commento
+        async function addComment(memeId) {
+            const content = document.getElementById('commentContent').value.trim();
+            
+            if (!content) {
+                showResult('Il commento non può essere vuoto', 'error');
+                return;
+            }
+
+            if (!authToken) {
+                showResult('Devi effettuare il login per commentare', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/memes/${memeId}/comments`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': authToken
+                    },
+                    body: JSON.stringify({ content })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('commentContent').value = '';
+                    loadComments(memeId); // Ricarica i commenti
+                    showResult('Commento aggiunto con successo!', 'success');
+                } else {
+                    showResult('Errore nell\'aggiungere il commento: ' + result.error, 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        }
+
+        // Vota commento
+        async function voteComment(commentId, isUpvote) {
+            if (!authToken) {
+                showResult('Devi effettuare il login per votare', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/comments/${commentId}/vote`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': authToken
+                    },
+                    body: JSON.stringify({ isUpvote })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showResult(result.message, 'success');
+                    // Ricarica i commenti per aggiornare i voti
+                    const memeId = getCurrentMemeIdFromModal();
+                    if (memeId) loadComments(memeId);
+                } else {
+                    showResult('Errore nel voto: ' + result.error, 'error');
+                }
+            } catch (error) {
+                showResult('Errore di rete: ' + error.message, 'error');
+            }
+        }
+
+        // Ottieni l'ID del meme corrente dal modal
+        function getCurrentMemeIdFromModal() {
+            const voteButtons = document.querySelectorAll('#memeDetail .vote-btn');
+            if (voteButtons.length > 0) {
+                const onclick = voteButtons[0].getAttribute('onclick');
+                const match = onclick.match(/voteMeme\((\d+),/);
+                return match ? parseInt(match[1]) : null;
+            }
+            return null;
+        }
+
+        // Chiudi modal
+        function closeMemeModal() {
+            document.getElementById('memeModal').style.display = 'none';
+        }
+
+        // Chiudi modal cliccando fuori
+        window.onclick = function(event) {
+            const modal = document.getElementById('memeModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

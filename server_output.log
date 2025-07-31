@@ -1,0 +1,622 @@
+Debugger listening on ws://127.0.0.1:39855/69f1d2b8-6551-4437-999c-fe96d207aa16
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+Server is running on http://localhost:3000
+API documentation available at http://localhost:3000/api-docs
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Users`);
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): PRAGMA foreign_key_list(`Users`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Users_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users_backup` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users`;
+Executing (default): DROP TABLE `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL, `surname` VARCHAR(255) NOT NULL, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Users` SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users_backup`;
+Executing (default): DROP TABLE `Users_backup`;
+Executing (default): PRAGMA INDEX_LIST(`Users`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Tags';
+Executing (default): PRAGMA TABLE_INFO(`Tags`);
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): PRAGMA TABLE_INFO(`Tags`);
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags_backup` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags`;
+Executing (default): DROP TABLE `Tags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags_backup`;
+Executing (default): DROP TABLE `Tags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Tags`);
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags_backup` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags`;
+Executing (default): DROP TABLE `Tags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags_backup`;
+Executing (default): DROP TABLE `Tags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Tags`);
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags_backup` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags`;
+Executing (default): DROP TABLE `Tags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags_backup`;
+Executing (default): DROP TABLE `Tags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Tags`);
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags_backup` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags`;
+Executing (default): DROP TABLE `Tags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags_backup`;
+Executing (default): DROP TABLE `Tags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Tags`);
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): PRAGMA foreign_key_list(`Tags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags_backup` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags_backup` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags`;
+Executing (default): DROP TABLE `Tags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Tags` (`id` INTEGER PRIMARY KEY, `name` VARCHAR(255) NOT NULL UNIQUE, `description` TEXT, `color` VARCHAR(255) DEFAULT '#6B7280', `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `Tags` SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags_backup`;
+Executing (default): DROP TABLE `Tags_backup`;
+Executing (default): PRAGMA INDEX_LIST(`Tags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Tags_1`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Memes';
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT 0, `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT 0, `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT 0, `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT 0, `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT 0, `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT 0, `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT 0, `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT 0, `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT 0, `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`));
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`Memes`);
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): PRAGMA foreign_key_list(`Memes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes_backup` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE);
+Executing (default): INSERT INTO `Memes_backup` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes`;
+Executing (default): DROP TABLE `Memes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Memes` (`id` INTEGER PRIMARY KEY, `title` VARCHAR(255) NOT NULL, `description` TEXT, `imageUrl` VARCHAR(255) NOT NULL, `authorId` INTEGER NOT NULL REFERENCES `Users` (`id`), `uploadDate` DATETIME NOT NULL, `upvotes` INTEGER DEFAULT '0', `downvotes` INTEGER DEFAULT '0', `likes` INTEGER DEFAULT '0', `views` INTEGER DEFAULT '0', `isPublic` TINYINT(1) DEFAULT 1, `downloadCount` INTEGER DEFAULT '0', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE);
+Executing (default): INSERT INTO `Memes` SELECT `id`, `title`, `description`, `imageUrl`, `authorId`, `uploadDate`, `upvotes`, `downvotes`, `likes`, `views`, `isPublic`, `downloadCount`, `isActive`, `createdAt`, `updatedAt`, `userId` FROM `Memes_backup`;
+Executing (default): DROP TABLE `Memes_backup`;
+Executing (default): PRAGMA INDEX_LIST(`Memes`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='MemeTags';
+Executing (default): PRAGMA TABLE_INFO(`MemeTags`);
+Executing (default): PRAGMA foreign_key_list(`MemeTags`)
+Executing (default): PRAGMA INDEX_LIST(`MemeTags`)
+Executing (default): PRAGMA INDEX_INFO(`meme_tags_meme_id_tag_id`)
+Executing (default): PRAGMA foreign_key_list(`MemeTags`)
+Executing (default): PRAGMA TABLE_INFO(`MemeTags`);
+Executing (default): PRAGMA INDEX_LIST(`MemeTags`)
+Executing (default): PRAGMA INDEX_INFO(`meme_tags_meme_id_tag_id`)
+Executing (default): PRAGMA foreign_key_list(`MemeTags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags_backup` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `tagId` INTEGER NOT NULL UNIQUE REFERENCES `Tags` (`id`), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags_backup` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags`;
+Executing (default): DROP TABLE `MemeTags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `tagId` INTEGER NOT NULL UNIQUE REFERENCES `Tags` (`id`), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags_backup`;
+Executing (default): DROP TABLE `MemeTags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeTags`);
+Executing (default): PRAGMA INDEX_LIST(`MemeTags`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeTags_1`)
+Executing (default): PRAGMA foreign_key_list(`MemeTags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags_backup` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`), `tagId` INTEGER NOT NULL REFERENCES `Tags` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags_backup` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags`;
+Executing (default): DROP TABLE `MemeTags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`), `tagId` INTEGER NOT NULL REFERENCES `Tags` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags_backup`;
+Executing (default): DROP TABLE `MemeTags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeTags`);
+Executing (default): PRAGMA INDEX_LIST(`MemeTags`)
+Executing (default): PRAGMA foreign_key_list(`MemeTags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags_backup` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`), `tagId` INTEGER NOT NULL REFERENCES `Tags` (`id`), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags_backup` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags`;
+Executing (default): DROP TABLE `MemeTags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`), `tagId` INTEGER NOT NULL REFERENCES `Tags` (`id`), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags_backup`;
+Executing (default): DROP TABLE `MemeTags_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeTags`);
+Executing (default): PRAGMA INDEX_LIST(`MemeTags`)
+Executing (default): PRAGMA foreign_key_list(`MemeTags`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags_backup` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`), `tagId` INTEGER NOT NULL REFERENCES `Tags` (`id`), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags_backup` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags`;
+Executing (default): DROP TABLE `MemeTags`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeTags` (`id` INTEGER PRIMARY KEY, `memeId` INTEGER NOT NULL REFERENCES `Memes` (`id`), `tagId` INTEGER NOT NULL REFERENCES `Tags` (`id`), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeTags` SELECT `id`, `memeId`, `tagId`, `createdAt`, `updatedAt` FROM `MemeTags_backup`;
+Executing (default): DROP TABLE `MemeTags_backup`;
+Executing (default): PRAGMA INDEX_LIST(`MemeTags`)
+Executing (default): CREATE UNIQUE INDEX `meme_tags_meme_id_tag_id` ON `MemeTags` (`memeId`, `tagId`)
+Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='MemeVotes';
+Executing (default): PRAGMA TABLE_INFO(`MemeVotes`);
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): PRAGMA INDEX_INFO(`meme_votes_user_id_meme_id`)
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): PRAGMA TABLE_INFO(`MemeVotes`);
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): PRAGMA INDEX_INFO(`meme_votes_user_id_meme_id`)
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes_backup` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes_backup` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes`;
+Executing (default): DROP TABLE `MemeVotes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes_backup`;
+Executing (default): DROP TABLE `MemeVotes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeVotes`);
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes_backup` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes_backup` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes`;
+Executing (default): DROP TABLE `MemeVotes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes_backup`;
+Executing (default): DROP TABLE `MemeVotes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeVotes`);
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes_backup` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes_backup` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes`;
+Executing (default): DROP TABLE `MemeVotes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes_backup`;
+Executing (default): DROP TABLE `MemeVotes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeVotes`);
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes_backup` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes_backup` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes`;
+Executing (default): DROP TABLE `MemeVotes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes_backup`;
+Executing (default): DROP TABLE `MemeVotes_backup`;
+Executing (default): PRAGMA TABLE_INFO(`MemeVotes`);
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): PRAGMA foreign_key_list(`MemeVotes`)
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes_backup` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes_backup` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes`;
+Executing (default): DROP TABLE `MemeVotes`;
+Executing (default): CREATE TABLE IF NOT EXISTS `MemeVotes` (`id` INTEGER PRIMARY KEY, `userId` INTEGER NOT NULL UNIQUE REFERENCES `Users` (`id`), `memeId` INTEGER NOT NULL UNIQUE REFERENCES `Memes` (`id`), `isUpvote` TINYINT(1) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+Executing (default): INSERT INTO `MemeVotes` SELECT `id`, `userId`, `memeId`, `isUpvote`, `createdAt`, `updatedAt` FROM `MemeVotes_backup`;
+Executing (default): DROP TABLE `MemeVotes_backup`;
+Executing (default): PRAGMA INDEX_LIST(`MemeVotes`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_1`)
+Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_MemeVotes_2`)
+Executing (default): CREATE UNIQUE INDEX `meme_votes_user_id_meme_id` ON `MemeVotes` (`userId`, `memeId`)
+Database synchronized successfully.
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser' AND `User`.`password` = 'bc09e511b196f91d3525b9ea4b283a7818d4655d544a0b765e853e9bd0db8f3e';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser';
+=== DEBUG authVerification ===
+All headers: {
+  host: 'localhost:3000',
+  'user-agent': 'curl/7.81.0',
+  accept: '*/*',
+  authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTAzNTM2LCJleHAiOjE3NTMxODk5MzZ9.YBNANsxXvzw8T8-5wbX9y3WiMQ-qYnlNOO1CZ8NhVxY',
+  'content-length': '958',
+  'content-type': 'multipart/form-data; boundary=------------------------364c4c271e65aca0'
+}
+Token from header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTAzNTM2LCJleHAiOjE3NTMxODk5MzZ9.YBNANsxXvzw8T8-5wbX9y3WiMQ-qYnlNOO1CZ8NhVxY
+🔍 Verifying token with secret: meme-museum-secret
+❌ Token verification failed: JsonWebTokenError: invalid signature
+    at /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/jsonwebtoken/verify.js:101:10)
+    at authVerification (file:///home/savino/Scrivania/MemeMuseumTecWeb-main/backend/middleware/authentication.js:17:29)
+    at Layer.handleRequest (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/router/lib/layer.js:152:17)
+    at next (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/router/lib/route.js:117:3)
+    at handle (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/router/lib/layer.js:152:17)
+    at /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/router/index.js:295:15
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser' AND `User`.`password` = 'bc09e511b196f91d3525b9ea4b283a7818d4655d544a0b765e853e9bd0db8f3e';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser';
+=== DEBUG authVerification ===
+All headers: {
+  host: 'localhost:3000',
+  connection: 'keep-alive',
+  'content-length': '454420',
+  'sec-ch-ua-platform': '"Linux"',
+  authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUzMDk2NTY0LCJleHAiOjE3NTMxODI5NjR9.iSNo557g_UeVw1rP2PSXDF8pn0_4QdHHP5OhLzzyD08',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.101.1 Chrome/134.0.6998.205 Electron/35.5.1 Safari/537.36',
+  'sec-ch-ua': '"Not:A-Brand";v="24", "Chromium";v="134"',
+  'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryk3U48G3XQdkvwtrE',
+  'sec-ch-ua-mobile': '?0',
+  accept: '*/*',
+  origin: 'http://localhost:3000',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-storage-access': 'active',
+  referer: 'http://localhost:3000/test-upload?id=39660575-e9ca-460b-b256-3adf5ff6c199&vscodeBrowserReqId=1753096552290',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'it'
+}
+Token from header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUzMDk2NTY0LCJleHAiOjE3NTMxODI5NjR9.iSNo557g_UeVw1rP2PSXDF8pn0_4QdHHP5OhLzzyD08
+🔍 Verifying token with secret: meme-museum-secret
+✅ Token decoded successfully: { id: 2, iat: 1753096564, exp: 1753182964 }
+=== DEBUG createMemeWithUpload ===
+req.body: [Object: null prototype] {
+  title: 'nmdednmke',
+  description: 'jnfkjerwf',
+  tags: '["love"]'
+}
+req.file: {
+  fieldname: 'image',
+  originalname: 'Screenshot 2024-01-25 at 11-01-15 2.41â\x82¬ 89% di SCONTO Collane con ciondolo in zircone rosso di lusso con confezione regalo di fiori di rosa per le donne della fidanzata I Love You Gifts 2023 gioielli da sposa alla moda - AliExpress.png',
+  encoding: '7bit',
+  mimetype: 'image/png',
+  destination: '/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/',
+  filename: 'meme-1753096586504-291331553.png',
+  path: '/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/meme-1753096586504-291331553.png',
+  size: 453702
+}
+req.user: { id: 2, iat: 1753096564, exp: 1753182964 }
+Executing (default): INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);
+Executing (32fe8227-08d0-45a9-b51d-9e7e859ff08d): BEGIN DEFERRED TRANSACTION;
+Executing (32fe8227-08d0-45a9-b51d-9e7e859ff08d): SELECT `id`, `name`, `description`, `color`, `createdAt`, `updatedAt` FROM `Tags` AS `Tag` WHERE `Tag`.`name` = 'love';
+Executing (32fe8227-08d0-45a9-b51d-9e7e859ff08d): INSERT INTO `Tags` (`id`,`name`,`color`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4);
+Executing (32fe8227-08d0-45a9-b51d-9e7e859ff08d): COMMIT;
+Executing (default): INSERT INTO `MemeTags` (`id`,`memeId`,`tagId`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4);
+Executing (default): SELECT `Meme`.`id`, `Meme`.`title`, `Meme`.`description`, `Meme`.`imageUrl`, `Meme`.`authorId`, `Meme`.`uploadDate`, `Meme`.`upvotes`, `Meme`.`downvotes`, `Meme`.`likes`, `Meme`.`views`, `Meme`.`isPublic`, `Meme`.`downloadCount`, `Meme`.`isActive`, `Meme`.`createdAt`, `Meme`.`updatedAt`, `Meme`.`userId`, `User`.`id` AS `User.id`, `User`.`username` AS `User.username`, `Tags`.`id` AS `Tags.id`, `Tags`.`name` AS `Tags.name`, `Tags`.`color` AS `Tags.color` FROM `Memes` AS `Meme` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` WHERE `Meme`.`id` = 1;
+Executing (default): SELECT count(DISTINCT(`Meme`.`id`)) AS `count` FROM `Memes` AS `Meme` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id`;
+Executing (default): SELECT `Meme`.*, `Tags`.`id` AS `Tags.id`, `Tags`.`name` AS `Tags.name`, `Tags`.`color` AS `Tags.color`, `User`.`id` AS `User.id`, `User`.`username` AS `User.username` FROM (SELECT `Meme`.`id`, `Meme`.`title`, `Meme`.`description`, `Meme`.`imageUrl`, `Meme`.`authorId`, `Meme`.`uploadDate`, `Meme`.`upvotes`, `Meme`.`downvotes`, `Meme`.`likes`, `Meme`.`views`, `Meme`.`isPublic`, `Meme`.`downloadCount`, `Meme`.`isActive`, `Meme`.`createdAt`, `Meme`.`updatedAt`, `Meme`.`userId` FROM `Memes` AS `Meme` ORDER BY `Meme`.`uploadDate` DESC LIMIT 0, 10) AS `Meme` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id` ORDER BY `Meme`.`uploadDate` DESC;
+Executing (default): SELECT count(DISTINCT(`Meme`.`id`)) AS `count` FROM `Memes` AS `Meme` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id`;
+Executing (default): SELECT `Meme`.*, `Tags`.`id` AS `Tags.id`, `Tags`.`name` AS `Tags.name`, `Tags`.`color` AS `Tags.color`, `User`.`id` AS `User.id`, `User`.`username` AS `User.username` FROM (SELECT `Meme`.`id`, `Meme`.`title`, `Meme`.`description`, `Meme`.`imageUrl`, `Meme`.`authorId`, `Meme`.`uploadDate`, `Meme`.`upvotes`, `Meme`.`downvotes`, `Meme`.`likes`, `Meme`.`views`, `Meme`.`isPublic`, `Meme`.`downloadCount`, `Meme`.`isActive`, `Meme`.`createdAt`, `Meme`.`updatedAt`, `Meme`.`userId` FROM `Memes` AS `Meme` ORDER BY `Meme`.`uploadDate` DESC LIMIT 0, 10) AS `Meme` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id` ORDER BY `Meme`.`uploadDate` DESC;
+Debugger ending on ws://127.0.0.1:39855/69f1d2b8-6551-4437-999c-fe96d207aa16
+For help, see: https://nodejs.org/en/docs/inspector
+{
+  name: 'Demo',
+  surname: 'User',
+  username: 'demouser',
+  email: 'demo@example.com',
+  password: 'demopass'
+}
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`email` = 'demo@example.com';
+{
+  name: 'Demo',
+  surname: 'User',
+  username: 'demouser',
+  email: 'demo@example.com',
+  password: 'demopass'
+}
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`email` = 'demo@example.com';
+Executing (default): SELECT count(DISTINCT(`Meme`.`id`)) AS `count` FROM `Memes` AS `Meme` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id`;
+Executing (default): SELECT `Meme`.*, `Tags`.`id` AS `Tags.id`, `Tags`.`name` AS `Tags.name`, `Tags`.`color` AS `Tags.color`, `User`.`id` AS `User.id`, `User`.`username` AS `User.username` FROM (SELECT `Meme`.`id`, `Meme`.`title`, `Meme`.`description`, `Meme`.`imageUrl`, `Meme`.`authorId`, `Meme`.`uploadDate`, `Meme`.`upvotes`, `Meme`.`downvotes`, `Meme`.`likes`, `Meme`.`views`, `Meme`.`isPublic`, `Meme`.`downloadCount`, `Meme`.`isActive`, `Meme`.`createdAt`, `Meme`.`updatedAt`, `Meme`.`userId` FROM `Memes` AS `Meme` ORDER BY `Meme`.`uploadDate` DESC LIMIT 0, 10) AS `Meme` LEFT OUTER JOIN ( `MemeTags` AS `Tags->MemeTag` INNER JOIN `Tags` AS `Tags` ON `Tags`.`id` = `Tags->MemeTag`.`tagId`) ON `Meme`.`id` = `Tags->MemeTag`.`memeId` LEFT OUTER JOIN `Users` AS `User` ON `Meme`.`userId` = `User`.`id` ORDER BY `Meme`.`uploadDate` DESC;
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'testuser';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser' AND `User`.`password` = 'bc09e511b196f91d3525b9ea4b283a7818d4655d544a0b765e853e9bd0db8f3e';
+Executing (default): SELECT `id`, `name`, `surname`, `username`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'demouser';
+=== DEBUG authVerification ===
+All headers: {
+  host: 'localhost:3000',
+  'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+  accept: '*/*',
+  'accept-language': 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  referer: 'http://localhost:3000/test-upload',
+  authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUzMDk3NDQxLCJleHAiOjE3NTMxODM4NDF9.kCoWIOkOEpkPMpTrmnHDPGSHW25Z-oKpiwywoTqobUk',
+  'content-type': 'multipart/form-data; boundary=----geckoformboundaryde998cad991cff05512ec9129ed07262',
+  'content-length': '127575',
+  origin: 'http://localhost:3000',
+  connection: 'keep-alive',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  priority: 'u=0'
+}
+Token from header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUzMDk3NDQxLCJleHAiOjE3NTMxODM4NDF9.kCoWIOkOEpkPMpTrmnHDPGSHW25Z-oKpiwywoTqobUk
+🔍 Verifying token with secret: meme-museum-secret
+✅ Token decoded successfully: { id: 2, iat: 1753097441, exp: 1753183841 }
+=== DEBUG createMemeWithUpload ===
+req.body: [Object: null prototype] {
+  title: 'ksfoiwr',
+  description: 'ienfioew',
+  tags: '["uni"]'
+}
+req.file: {
+  fieldname: 'image',
+  originalname: 'photo_2024-10-29_08-26-15.jpg',
+  encoding: '7bit',
+  mimetype: 'image/jpeg',
+  destination: '/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/',
+  filename: 'meme-1753097460281-790799708.jpg',
+  path: '/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/meme-1753097460281-790799708.jpg',
+  size: 126993
+}
+req.user: { id: 2, iat: 1753097441, exp: 1753183841 }
+Executing (default): INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);
+Errore durante la creazione del meme: Error
+    at Database.<anonymous> (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/sqlite/query.js:185:27)
+    at /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/sqlite/query.js:183:50
+    at new Promise (<anonymous>)
+    at Query.run (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/sqlite/query.js:183:12)
+    at /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async SQLiteQueryInterface.insert (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async Meme.create (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async createMemeWithUpload (file:///home/savino/Scrivania/MemeMuseumTecWeb-main/backend/controllers/handleMeme.js:385:22) {
+  name: 'SequelizeDatabaseError',
+  parent: [Error: SQLITE_READONLY: attempt to write a readonly database] {
+    errno: 8,
+    code: 'SQLITE_READONLY',
+    sql: 'INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);'
+  },
+  original: [Error: SQLITE_READONLY: attempt to write a readonly database] {
+    errno: 8,
+    code: 'SQLITE_READONLY',
+    sql: 'INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);'
+  },
+  sql: 'INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);',
+  parameters: {}
+}
+File eliminato: /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/meme-1753097460281-790799708.jpg
+=== DEBUG authVerification ===
+All headers: {
+  host: 'localhost:3000',
+  'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+  accept: '*/*',
+  'accept-language': 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  referer: 'http://localhost:3000/test-upload',
+  authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUzMDk3NDQxLCJleHAiOjE3NTMxODM4NDF9.kCoWIOkOEpkPMpTrmnHDPGSHW25Z-oKpiwywoTqobUk',
+  'content-type': 'multipart/form-data; boundary=----geckoformboundary748cc8983322e0c56642812dbd5e841',
+  'content-length': '127570',
+  origin: 'http://localhost:3000',
+  connection: 'keep-alive',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  priority: 'u=0'
+}
+Token from header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUzMDk3NDQxLCJleHAiOjE3NTMxODM4NDF9.kCoWIOkOEpkPMpTrmnHDPGSHW25Z-oKpiwywoTqobUk
+🔍 Verifying token with secret: meme-museum-secret
+✅ Token decoded successfully: { id: 2, iat: 1753097441, exp: 1753183841 }
+=== DEBUG createMemeWithUpload ===
+req.body: [Object: null prototype] {
+  title: 'ksfoiwr',
+  description: 'ienfioew',
+  tags: '["uni"]'
+}
+req.file: {
+  fieldname: 'image',
+  originalname: 'photo_2024-10-29_08-26-15.jpg',
+  encoding: '7bit',
+  mimetype: 'image/jpeg',
+  destination: '/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/',
+  filename: 'meme-1753097462615-427334658.jpg',
+  path: '/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/meme-1753097462615-427334658.jpg',
+  size: 126993
+}
+req.user: { id: 2, iat: 1753097441, exp: 1753183841 }
+Executing (default): INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);
+Errore durante la creazione del meme: Error
+    at Database.<anonymous> (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/sqlite/query.js:185:27)
+    at /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/sqlite/query.js:183:50
+    at new Promise (<anonymous>)
+    at Query.run (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/sqlite/query.js:183:12)
+    at /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async SQLiteQueryInterface.insert (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async Meme.create (/home/savino/Scrivania/MemeMuseumTecWeb-main/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async createMemeWithUpload (file:///home/savino/Scrivania/MemeMuseumTecWeb-main/backend/controllers/handleMeme.js:385:22) {
+  name: 'SequelizeDatabaseError',
+  parent: [Error: SQLITE_READONLY: attempt to write a readonly database] {
+    errno: 8,
+    code: 'SQLITE_READONLY',
+    sql: 'INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);'
+  },
+  original: [Error: SQLITE_READONLY: attempt to write a readonly database] {
+    errno: 8,
+    code: 'SQLITE_READONLY',
+    sql: 'INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);'
+  },
+  sql: 'INSERT INTO `Memes` (`id`,`title`,`description`,`imageUrl`,`authorId`,`uploadDate`,`upvotes`,`downvotes`,`likes`,`views`,`isPublic`,`downloadCount`,`isActive`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);',
+  parameters: {}
+}
+File eliminato: /home/savino/Scrivania/MemeMuseumTecWeb-main/backend/uploads/meme-1753097462615-427334658.jpg
