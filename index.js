@@ -36,9 +36,15 @@ const swaggerSpec = swaggerJSDoc({
 });
 
 
+const cors = require('cors');
+app.use(cors());
+
+
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.use(cors({origin : 'http://localhost:4200'}));
+app.use(cors({
+  origin: 'http://mememuseum.altervista.org'
+}));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
