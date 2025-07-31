@@ -15,7 +15,6 @@ import { signupRouter } from './routes/signup.js';
 import { loginRouter } from './routes/login.js';
 import { memeRouter } from './routes/meme.js';
 import { commentRouter } from './routes/comment.js';
-import { tagRouter } from './routes/tag.js';
 
 
 const app = express();
@@ -39,13 +38,7 @@ const swaggerSpec = swaggerJSDoc({
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.use(cors({
-  origin: [
-    'http://mememuseum.altervista.org',
-    'https://mememuseum.altervista.org'
-  ],
-  credentials: true
-}));
+app.use(cors({origin : 'http://localhost:4200'}));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -66,7 +59,6 @@ app.use(signupRouter);
 app.use(loginRouter);
 app.use('/api', memeRouter);
 app.use('/api', commentRouter);
-app.use('/api', tagRouter);
 
 // Route di benvenuto
 app.get('/', (req, res) => {
